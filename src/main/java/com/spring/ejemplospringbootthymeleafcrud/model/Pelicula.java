@@ -8,7 +8,7 @@ public class Pelicula {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id_pelicula;
 
     @Column(name = "titulo_pelicula")
     private String titulo;
@@ -17,11 +17,11 @@ public class Pelicula {
     private String director;
 
     public long getId() {
-        return id;
+        return id_pelicula;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this.id_pelicula = id;
     }
 
     public String getTitulo() {

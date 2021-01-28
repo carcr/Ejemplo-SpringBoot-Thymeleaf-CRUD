@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Peliculas CRUD</title>
+</head>
+<body>
+    <header>
+        <h1>Listado Películas</h1>
+    </header>
+
+    <section>
+        <a th:href="@{/showNewPeliculaForm}">Añadir Pelicula</a>
+    </section>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Director</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pelicula : ${listaPeliculas}">
+                    <td th:text="${pelicula.titulo}"></td>
+                    <td th:text="${pelicula.director}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
