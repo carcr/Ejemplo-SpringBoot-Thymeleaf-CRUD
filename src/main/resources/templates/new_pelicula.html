@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Nueva Película</title>
+    <link rel="stylesheet" href="/css/new_pelicula.css">
 </head>
 <body>
     <header>
         <h1>Nueva Película</h1>
     </header>
 
-    <section>
+    <section class="contenedor-formulario">
         <form th:action="@{/savePelicula}" th:object="${pelicula}" method="post">
+            <label>Título Película</label>
             <input type="text" th:field="*{titulo}" placeholder="Título"/>
+            <label>Director</label>
             <input type="text" th:field="*{director}" placeholder="Director"/>
-            <button type="submit">Guardar Película</button>
+            <input type="submit" value="Añadir"/>
         </form>
 
-        <a th:href="@{/}">Volver al listado</a>
+        <a th:href="@{/}" id="b-volver">Volver al listado</a>
     </section>
 </body>
 </html>

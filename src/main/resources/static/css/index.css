@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+body {
+	font-family: Arial;
+	color: rgba(0, 0, 0, 1);
+}
+
+header,
+.contenedor-botonAdd,
+.contenedor-tablaListado {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+header h1 {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 5px;
+	padding: 50px 0;
+}
+
+.contenedor-botonAdd a {
+	background-color: rgba(65, 105, 225, 0.808);
+	color: whitesmoke;
+	border-radius: 5px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 20px 15px;
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+
+.contenedor-botonAdd a:hover {
+	background-color: rgb(65, 105, 225);
+	letter-spacing: 3px;
+}
+
+.contenedor-tablaListado {
+	padding: 10px 0;
+}
+
+.tabla-listado {
+	border-radius: 3px;
+}
+
+.tabla-listado,
+.tabla-listado th,
+.tabla-listado td {
+	border: 3px solid rgb(32, 32, 32);
+	border-collapse: collapse;
+}
+
+.tabla-listado th,
+.tabla-celda {
+	padding: 20px 10px;
+}
+.tabla-listado th {
+	background-color: rgba(80, 80, 80, 0.5);
+	color: whitesmoke;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 17px;
+}
+
+.botonT {
+	color: whitesmoke;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 20px 10px;
+	transition: all 0.3s;
+}
+
+#b-actualizar {
+	background-color: rgba(0, 175, 161, 0.6);
+}
+#b-eliminar {
+	background-color: rgba(201, 41, 41, 0.75);
+}
+
+#b-actualizar:hover {
+	background-color: rgba(0, 175, 161, 1);
+}
+#b-eliminar:hover {
+	background-color: rgb(201, 41, 41);
+}

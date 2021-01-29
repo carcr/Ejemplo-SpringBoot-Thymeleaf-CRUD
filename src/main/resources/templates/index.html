@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Películas CRUD</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <header>
         <h1>Listado Películas</h1>
     </header>
 
-    <section>
-        <a th:href="@{/showNewPeliculaForm}">Añadir Película</a>
+    <section class="contenedor-botonAdd">
+        <a th:href="@{/showNewPeliculaForm}" id="#b-add">Añadir Película</a>
     </section>
 
-    <section>
-        <table>
+    <section class="contenedor-tablaListado">
+        <table class="tabla-listado">
             <thead>
                 <tr>
                     <th>Título</th>
@@ -23,10 +24,10 @@
             </thead>
             <tbody>
                 <tr th:each="pelicula : ${listaPeliculas}">
-                    <td th:text="${pelicula.titulo}"></td>
-                    <td th:text="${pelicula.director}"></td>
-                    <td><a th:href="@{/showFormUpdate/{id}(id=${pelicula.id})}">Actualizar</a></td>
-                    <td><a th:href="@{/deletePelicula/{id}(id=${pelicula.id})}">Eliminar</a></td>
+                    <td th:text="${pelicula.titulo}" class="tabla-celda"></td>
+                    <td th:text="${pelicula.director}" class="tabla-celda"></td>
+                    <td><a th:href="@{/showFormUpdate/{id}(id=${pelicula.id})}" class="botonT" id="b-actualizar">Actualizar</a></td>
+                    <td><a th:href="@{/deletePelicula/{id}(id=${pelicula.id})}" class="botonT" id="b-eliminar">Eliminar</a></td>
                 </tr>
             </tbody>
         </table>
