@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Peliculas CRUD</title>
+    <title>Películas CRUD</title>
 </head>
 <body>
     <header>
@@ -10,14 +10,14 @@
     </header>
 
     <section>
-        <a th:href="@{/showNewPeliculaForm}">Añadir Pelicula</a>
+        <a th:href="@{/showNewPeliculaForm}">Añadir Película</a>
     </section>
 
     <section>
         <table>
             <thead>
                 <tr>
-                    <th>Titulo</th>
+                    <th>Título</th>
                     <th>Director</th>
                 </tr>
             </thead>
@@ -25,6 +25,8 @@
                 <tr th:each="pelicula : ${listaPeliculas}">
                     <td th:text="${pelicula.titulo}"></td>
                     <td th:text="${pelicula.director}"></td>
+                    <td><a th:href="@{/showFormUpdate/{id}(id=${pelicula.id})}">Actualizar</a></td>
+                    <td><a th:href="@{/deletePelicula/{id}(id=${pelicula.id})}">Eliminar</a></td>
                 </tr>
             </tbody>
         </table>
